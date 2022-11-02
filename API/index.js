@@ -16,3 +16,12 @@ mongoose.connect(
     console.log("connected to MongoDB")
     }
 );
+
+//Middleware
+app.use(express.json());
+app.use(helmet());
+app.use(morgan("common"));
+
+app.listen(8800,()=>{
+    console.log("Backend server is running! Hello Tolani")
+});
