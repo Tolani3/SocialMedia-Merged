@@ -11,3 +11,5 @@ npm install bcrypt
 ## Client
 ### To Start Application/ First Install
 npx create-react-app . (<- yes add the dot) 
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material (For Icon use) // https://mui.com/material-ui/material-icons/
