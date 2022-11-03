@@ -1,5 +1,5 @@
 .sidebar {
-    flex: 3;
+    /* flex: 3; */
   /* Subtracting 50px from the height of the viewport. */
     height: calc(100vh - 50px);
     overflow-y: scroll;
