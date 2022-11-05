@@ -1,7 +1,11 @@
 import Topbar from "../../components/topbar/Topbar";
-import Sidebar from "../../components/sidebar/Sidebar";
 import Feed from "../../components/feed/Feed";
+
+import Sidebar from "../../components/sidebar/Sidebar";
+// import Sidebar2 from "../../components/sidebar2/Sidebar2";
+
 // import Rightbar from "../../components/rightbar/Rightbar";
+
 import "./home.css"
 
 export default function Home() {
@@ -10,7 +14,8 @@ export default function Home() {
     <>
       <Topbar />
       <div className="homeContainer">
-        <Sidebar />
+        <Sidebar/>
+        {/* <Sidebar2/> */}
         <Feed />
         {/* <Rightbar /> */}
       </div>
