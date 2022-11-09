@@ -1,11 +1,15 @@
 import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
+import {Link} from "react-router-dom"
 
 export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">HypeBites</span>
+      {/*   A react-router-dom component that allows you to link to other pages in your app.  */}
+        <Link to="/" style={{textDecoration:"none"}}>
+        <span className="logo">TolaniSocial</span>
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
