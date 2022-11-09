@@ -28,7 +28,7 @@ export default function egister2() {
             <input type="text" placeholder="Username" />
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Password" />
             <button>Register</button>
           </form>
         </div>

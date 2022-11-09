@@ -6,8 +6,11 @@ import { useState } from "react";
 export default function /* A function that takes in a parameter called `post` and returns a `div`
 element. */
 Post({ post }) {
+  
   const [like, setLike] = useState(post.like);
   const [isLiked, setIsLiked] = useState(false);
+
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
 
   /**
    * If the state of isLiked is true, then subtract 1 from the like state, otherwise add 1 to the like
@@ -41,7 +44,7 @@ Post({ post }) {
         <div className="postCenter">
           <span className="postText">{post?.desc} </span>
           {/* Add "stars" for rating review */}
-          <img className="postImg" src={post.photo} alt="" />
+          <img className="postImg" src={PF+post.photo} alt="" />
         </div>
         <div className="postBottom"></div>
         <div className="postBottomLeft">
