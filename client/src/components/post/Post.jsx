@@ -50,17 +50,17 @@ Post({ post }) {
         <div className="postBottomLeft">
           <img
             className="likeIcon"
-            src="assets/like.png"
+            src={`${PF}like.png`}
             onClick={likeHandler}
             alt=""
           />
           <img
             className="likeIcon"
-            src="assets/heart.png"
+            src={`${PF}heart.png`}
             onClick={likeHandler}
             alt=""
           />
-          <span className="postLikeCounter"> people liked it</span>
+          <span className="postLikeCounter">{post.like} people liked it</span>
         </div>
         <div className="postBottomRight">
           <span className="postCommentText">{post.comment} comments</span>
