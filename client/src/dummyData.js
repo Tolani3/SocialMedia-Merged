@@ -59,7 +59,7 @@ export const Users = [
       date: "5 mins ago",
       userId: 1,
       like: 32,
-      //comment: 9,
+      comment: 9,
     },
     {
       id: 2,
@@ -67,7 +67,7 @@ export const Users = [
       date: "15 mins ago",
       userId: 2,
       like: 2,
-      //comment: 1,
+      comment: 1,
     },
     {
       id: 3,
@@ -76,7 +76,7 @@ export const Users = [
       date: "1 hour ago",
       userId: 3,
       like: 61,
-      //comment: 2,
+      comment: 2,
     },
     {
       id: 4,
@@ -85,7 +85,7 @@ export const Users = [
       date: "4 hours ago",
       userId: 4,
       like: 7,
-      //comment: 3,
+      comment: 3,
     },
     {
       id: 5,
@@ -93,7 +93,7 @@ export const Users = [
       date: "5 hours ago",
       userId: 5,
       like: 23,
-      //comment: 5,
+      comment: 5,
     },
     {
       id: 6,
@@ -102,7 +102,7 @@ export const Users = [
       date: "1 day ago",
       userId: 6,
       like: 44,
-      //comment: 6,
+      comment: 6,
     },
     {
       id: 7,
@@ -111,7 +111,7 @@ export const Users = [
       date: "2 days ago",
       userId: 7,
       like: 52,
-      //comment: 3,
+      comment: 3,
     },
     {
       id: 8,
@@ -119,7 +119,7 @@ export const Users = [
       date: "3 days ago",
       userId: 8,
       like: 15,
-      //comment: 1,
+      comment: 1,
     },
     {
       id: 9,
@@ -128,7 +128,7 @@ export const Users = [
       date: "5 days ago",
       userId: 9,
       like: 11,
-      //comment: 2,
+      comment: 2,
     },
     {
       id: 10,
@@ -136,6 +136,6 @@ export const Users = [
       date: "1 week ago",
       userId: 10,
       like: 104,
-      //comment: 12,
+      comment: 12,
     },
   ];
