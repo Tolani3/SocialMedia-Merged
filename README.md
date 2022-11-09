@@ -13,3 +13,8 @@ npm install bcrypt
 npx create-react-app . (<- yes add the dot) 
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material (For Icon use) // https://mui.com/material-ui/material-icons/
+npm add axios (to client)
+
+
+## /* Telling the app to use the proxy server to make the API calls. */
+"proxy":"http://localhost:8800/api"
