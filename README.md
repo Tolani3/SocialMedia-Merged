@@ -1,5 +1,7 @@
 # SocialMedia-Merged
 
+Social media application using ReactJs, NodeJs, and mongoDB
+
 ## API
 ### To Start Application/ First Install
 npm init
