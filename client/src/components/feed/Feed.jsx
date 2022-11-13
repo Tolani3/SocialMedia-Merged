@@ -8,27 +8,32 @@ import "./feed.css";
 // import {Posts} from "../../dummyData"
 //import { useState, useEffect } from "react";
 
-export default function Feed() {
-  const[posts,setPosts] = useState([]);
+export default function Feed({ username }) {
+  const [posts, setPosts] = useState([]);
 
-  useEffect(()=>{
-    const fetchPosts = async () =>{
-      const res = await axios.get("posts/timeline/635351b8dadb67a384bde2d7");
-      //setPosts(res.data)
-      console.log(res);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = username
+         //setPosts(res.data)
+        ? await axios.get("posts/profile/" + username)
+        : await axios.get("posts/timeline/");
+      //console.log(res);
+      setPosts(res.data);
     };
     fetchPosts();
-  },[]);
+  }, [username])
+  // useEffect(() =>{
+  //   console.log("Feed rendered")
+  // },[]);
 
-  
   return (
     <div className="feed">
       <div className="feedWrapper">
-        <Share/>
-      {posts.map((p) => (
-            <Post key ={p.id} post={p}/>
+        <Share />
+        {posts.map((p) => (
+            <Post key ={p._id} post={p}/>
           ))}
       </div>
     </div>
-  )
+  );
 }

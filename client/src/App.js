@@ -14,13 +14,31 @@ import Profile from "./pages/profile/Profile";
 
 function App() {
   // return <Register2/>;
+  // return (
+  //   <Router>
+  //     <Routes >
+  //       <Route exact path="/">
+  //         <Home />
+  //       </Route>
+  //       <Route path="/login">
+  //         <Login2 />
+  //       </Route>
+  //       <Route path="/register">
+  //         <Register2 />
+  //       </Route>
+  //       <Route path="/profile/:username">
+  //         <Profile />
+  //       </Route>
+  //     </Routes >
+  //   </Router>
+  // );
   return (
     <Router>
       <Routes>
         <Route path="/login" element={<Login2 />} />
         <Route path="/register" element={<Register2 />} />
         <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile/:username" element={<Profile />} />
       </Routes>
     </Router>
   );
