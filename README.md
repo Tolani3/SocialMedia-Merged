@@ -15,3 +15,8 @@ npm install bcrypt
 npx create-react-app . (<- yes add the dot) 
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/icons-material (For Icon use) // https://mui.com/material-ui/material-icons/
+
+
+npm install react-router-dom
+changed version for react router dom-check what this projects looks like
+Make sure package.json in API file is correct
