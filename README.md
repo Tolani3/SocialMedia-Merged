@@ -20,3 +20,4 @@ npm install @mui/icons-material (For Icon use) // https://mui.com/material-ui/ma
 npm install react-router-dom
 changed version for react router dom-check what this projects looks like
 Make sure package.json in API file is correct
+To client -> npm add axios

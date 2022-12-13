@@ -1,4 +1,4 @@
-const router = require("express").Router();
+ const router = require("express").Router();
 const { findById } = require("../models/Post");
 const Post = require("../models/Post");
 const User = require("../models/User"); 
@@ -73,7 +73,8 @@ router.get("/:id", async (req,res) => {
     
 //Get timeline posts (Of the users followers)
 /* Finding all the posts of the current user and all the posts of the current user's friends. */
-router.get("/timeline/all", async (req,res) => {
+// router.get("/timeline/all", async (req,res) => {
+    router.get("/timeline/userId", async (req,res) => {
     try{
         const currentUser = await User.findById(req.body.userId);
         const userPosts = await Post.find({userId: currentUser._id});
@@ -82,7 +83,7 @@ router.get("/timeline/all", async (req,res) => {
                return Post.find({userId: friendId});
             })
         );
-        res.json(userPosts.concat(...friendPosts))
+        res.status(200)(userPosts.concat(...friendPosts))
     }catch(err){
         res.status(500).json(err);
     }
