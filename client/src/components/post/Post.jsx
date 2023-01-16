@@ -9,7 +9,7 @@ import axios from "axios";
 export default function /* A function that takes in a parameter called `post` and returns a `div`
 element. */
 Post({ post }) {
-  const [like, setLike] = useState(post.like);
+  const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
@@ -43,7 +43,7 @@ Post({ post }) {
             <img
               className="postProfileImg"
               //src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
-              src={user.profilePicture}
+              src={user.profilePicture || PF+"person/noAvater.jpg"}
               alt=""
             />
             <span className="postUsername">
@@ -57,7 +57,7 @@ Post({ post }) {
         <div className="postCenter">
           <span className="postText">{post?.desc} </span>
           {/* Add "stars" for rating review */}
-          <img className="postImg" src={PF+post.photo} alt="" />
+          <img className="postImg" src={PF+post.img} alt="" />
         </div>
         <div className="postBottom"></div>
         <div className="postBottomLeft">
@@ -73,7 +73,7 @@ Post({ post }) {
             onClick={likeHandler}
             alt=""
           />
-          <span className="postLikeCounter"> people liked it</span>
+          <span className="postLikeCounter">{like} people liked it</span>
         </div>
         <div className="postBottomRight">
           <span className="postCommentText">{post.comment} comments</span>
