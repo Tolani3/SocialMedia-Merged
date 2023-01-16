@@ -1,14 +1,28 @@
 import { MoreVert } from "@mui/icons-material";
 import "./post.css";
-import { Users } from "../../dummyData";
+// import { Users } from "../../dummyData";
 import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+
 
 export default function /* A function that takes in a parameter called `post` and returns a `div`
 element. */
 Post({ post }) {
   const [like, setLike] = useState(post.like);
   const [isLiked, setIsLiked] = useState(false);
+  const [user, setUser] = useState({});
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+
+  useEffect(()=>{
+    const fetchUser = async () => {
+      const res = await axios.get(`users/${post.userId}`);
+      //console.log(res)
+      setUser(res.data);
+    };
+    fetchUser();
+  },[]);
 
   /**
    * If the state of isLiked is true, then subtract 1 from the like state, otherwise add 1 to the like
@@ -28,11 +42,12 @@ Post({ post }) {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
+              //src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
+              src={user.profilePicture}
               alt=""
             />
             <span className="postUsername">
-              {Users.filter((u) => u.id === post.userId)[0].username}
+              {user.username}
             </span>
             <span className="postDate">{post.date}</span>
           </div>

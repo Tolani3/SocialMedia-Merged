@@ -15,13 +15,12 @@ export default function Feed() {
   // },[])
 
   useEffect(() => {
-    // const fetchPosts = async () => {
-    //  const res = await axios.get("posts/timeline/635351b8dadb67a384bde2d7")
-    const res = axios.get("posts/timeline/635351b8dadb67a384bde2d7");
-    console.log(res);
-    //   setPosts(res.data);
-    // };
-    // fetchPosts();
+    const fetchPosts = async () => {
+      const res = await axios.get("posts/timeline/635351b8dadb67a384bde2d7");
+      // console.log(res);
+        setPosts(res.data);
+    };
+    fetchPosts();
   }, []);
 
   return (

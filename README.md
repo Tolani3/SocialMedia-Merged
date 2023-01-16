@@ -21,3 +21,8 @@ npm install react-router-dom
 changed version for react router dom-check what this projects looks like
 Make sure package.json in API file is correct
 To client -> npm add axios
+
+
+Change in "package.json" in the client side "react-router-dom": "^5.2.0",
+
+30:04
