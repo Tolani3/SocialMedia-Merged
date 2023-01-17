@@ -4,6 +4,8 @@ import "./post.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
+import { format } from "timeago.js";
+
 
 
 export default function /* A function that takes in a parameter called `post` and returns a `div`
@@ -49,7 +51,7 @@ Post({ post }) {
             <span className="postUsername">
               {user.username}
             </span>
-            <span className="postDate">{post.date}</span>
+            <span className="postDate">{format(post.createdAt)}</span>
           </div>
           <div className="postTopRight"></div>
           <MoreVert />
