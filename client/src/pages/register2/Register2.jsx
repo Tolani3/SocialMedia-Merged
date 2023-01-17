@@ -1,5 +1,5 @@
 //import { useContext } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 //import { AuthContext } from "../../context/authContext";
 import "./register2.scss";
 //import { AuthContext } from "../../authContext";
@@ -18,9 +18,9 @@ export default function egister2() {
             consequatur.
           </p>
           <span>Do you have an account?</span>
-          {/* <Link to="../register2">
+          <Link to="../login">
           <button>Login</button>
-          </Link> */}
+          </Link>
         </div>
         <div className="right">
           <h1>Register</h1>

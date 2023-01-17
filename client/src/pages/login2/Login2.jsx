@@ -1,12 +1,19 @@
-//import { useContext } from "react";
-//import { Link } from "react-router-dom";
-//import { AuthContext } from "../../context/authContext";
+// import { useContext } from "react";
+import { Link } from "react-router-dom";
+// import { AuthContext } from "../../context/authContext";
 import "./login2.scss";
 //import { AuthContext } from "../../authContext";
 
 
 
 export default function Login2() {
+  // const Login = () => {
+  // const { login } = useContext(AuthContext);
+
+  // const handleLogin = () => {
+  //   login();
+  // };
+  
   return (
     <div className="login">
       <div className="card">
@@ -17,10 +24,10 @@ export default function Login2() {
             alias totam numquam ipsa exercitationem dignissimos, error nam,
             consequatur.
           </p>
-          <span>Don't you have an account?</span>
-          {/* <Link to="/register">
+          <span>Don't have an account?</span>
+          <Link to="/register">
             <button>Register</button>
-          </Link> */}
+          </Link>
         </div>
         <div className="right">
           <h1>Login</h1>
@@ -34,4 +41,4 @@ export default function Login2() {
     </div>
   );
 }
-//}
+// }
