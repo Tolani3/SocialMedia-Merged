@@ -30,7 +30,7 @@ export default function Feed() {
         {/* Mapping through the Posts array and returning a Post component for each post. */}
         <Share />
         {posts.map((p) => (
-          <Post key={p.id} post={p} />
+          <Post key={p._id} post={p} />
         ))}
       </div>
     </div>
