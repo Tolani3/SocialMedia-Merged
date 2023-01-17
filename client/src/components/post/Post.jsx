@@ -24,7 +24,7 @@ Post({ post }) {
       setUser(res.data);
     };
     fetchUser();
-  },[]);
+  },[post.userId]);
 
   /**
    * If the state of isLiked is true, then subtract 1 from the like state, otherwise add 1 to the like
