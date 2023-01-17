@@ -9,10 +9,11 @@ import Profile from "./pages/profile/Profile";
 import {
   BrowserRouter as Router,
   Routes,
+  //Switch,
   Route,
   // Navigate
 } from "react-router-dom";
-// import { useContext } from "react";
+import { useContext } from "react";
 
 
 function App() {
@@ -20,12 +21,12 @@ function App() {
   // const { user } = useContext(AuthContext)
  return (
     <Router>
-      <Routes >
-      <Route exact path="/" element={<Home/>} />
+      <Routes>
+      <Route exact path='/' element={<Home/>} />
         <Route path="/login" element={<Login2/>} />
         <Route path="/register" element={<Register2/>} />
         <Route path="/profile/:username" element={<Profile/>} />
-      </Routes >
+      </Routes>
     </Router>
   );
 }
